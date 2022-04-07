@@ -1,6 +1,6 @@
 ## Capstone_I
 
-## FHIR project
+# FHIR project
 
-## JAVA + Javascript + Bootstrap 5.0
+# JAVA + Javascript + Bootstrap 5.0
 
