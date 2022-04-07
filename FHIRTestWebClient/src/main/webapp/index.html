@@ -1,0 +1,202 @@
+<!doctype HTML>
+<html>
+  <head>
+    <title>Test EMR FHIR web client</title>
+    <meta charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="json-viewer/jquery.json-viewer.js"></script>
+    <link href="json-viewer/jquery.json-viewer.css" type="text/css" rel="stylesheet">
+
+    <style type="text/css">
+		body {
+		  margin: 0 100px;
+		  font-family: sans-serif;
+		}
+		p.options label {
+		  margin-right: 10px;
+		}
+		p.options input[type=checkbox] {
+		  vertical-align: middle;
+		}
+		textarea#json-input {
+		  width: 100%;
+		  height: 200px;
+		}
+		pre#json-renderer {
+		  border: 1px solid #aaa;
+		}
+    </style>
+
+    <script>
+    let data = JSON.parse(response);
+    function runJsonViewer(data) {
+    	
+		$('#json-renderer').jsonViewer(data, {
+			collapsed: $('#collapsed').is(':checked'), rootCollapsable: $('#root-collapsable').is(':checked'),
+		    withQuotes: $('#with-quotes').is(':checked'), withLinks: $('#with-links').is(':checked')
+		});
+		
+    }
+    
+    function runPatient() {
+    	$(function() {
+    		//alert("Patient");
+    		
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/Patient/"+document.getElementById("pid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+    		
+    		
+	  	});
+    }
+
+    function runPractitioner() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/Practitioner/"+document.getElementById("prid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+
+    function runHospital() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/Organization/"+document.getElementById("hid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+
+    function runEncounter() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/Encounter/"+document.getElementById("eid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+
+    function runDiagnosis() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/Condition/"+document.getElementById("did").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+
+    function runMedication() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/MedicationRequest/"+document.getElementById("mid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+
+    function runImageStudy() {
+    	$(function() {
+    		var jqxhr = $.get( "http://localhost:8080/hapi-fhirstarters-simple-server/ImagingStudy/"+document.getElementById("imid").value, function() {})
+    			.done(function(data) {
+    				runJsonViewer(data);
+    			})
+    			.fail(function() { alert( "error" ); });
+	  	});
+    }
+    
+    function WebPatient(){
+    	var index = document.getElementById("pid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/Patient/"+index;
+    	return result
+    }
+    function WebPractitioner(){
+    	var index = document.getElementById("prid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/Practitioner/"+index;
+    	return result
+    }
+    function WebHospital(){
+    	var index = document.getElementById("hid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/Organization/"+index;
+    	return result
+    }
+    function WebEncounter(){
+    	var index = document.getElementById("eid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/Encounter/"+index;
+    	return result
+    }
+    function WebDiagnosis(){
+    	var index = document.getElementById("did").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/Condition/"+index;
+    	return result
+    }
+    function WebMedication(){
+    	var index = document.getElementById("mid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/MedicationRequest/"+index;
+    	return result
+    }
+    function WebImageStudy(){
+    	var index = document.getElementById("imid").value;
+    	alert(index);
+    	var result = "http://localhost:8080/hapi-fhirstarters-simple-server/ImagingStudy/"+index;
+    	return result
+    }
+    
+
+  </script>	
+  </head>
+  
+  <body>
+    <h1>Test EMR FHIR Web Client</h1>
+    <hr>
+	<!--  
+		
+		<p><span>Patient ID </span><input type="text" size=1 id="pid" name="pid" value="1"> <button onclick="runPatient()">Extract!</button></p>
+		<button onclick="window.open(WebPatient())">Extract!</button>
+	-->
+	
+	<p><span>Patient ID </span><input type="text" size=1 id="pid" name="pid" value="1"> <button onclick="runPatient()">Extract!</button> <button>Delete</button></p>
+	<p><span>Practitioner ID </span><input type="text" size=1 id="prid" name="prid" value="1"> <button onclick="window.open(WebPractitioner())">Extract!</button> <button>Edit</button> <button>Delete</button></p>
+	<p><span>Hospital ID </span><input type="text" size=1 id="hid" name="hid" value="1"> <button onclick="window.open(WebHospital())">Extract!</button> <button>Edit</button> <button>Delete</button></p>
+	<p><span>Encounter ID </span><input type="text" size=1 id="eid" name="eid" value="1"> <button onclick="window.open(WebEncounter())">Extract!</button> <button>Edit</button> <button>Delete</button> </p>
+	<p><span>Diagnosis ID </span><input type="text" size=1 id="did" name="did" value="1"> <button onclick="window.open(WebDiagnosis())">Extract!</button> <button>Edit</button> <button>Delete</button> </p>
+	<p><span>Medication ID </span><input type="text" size=1 id="mid" name="mid" value="1"> <button onclick="window.open(WebMedication())">Extract!</button> <button>Edit</button> <button>Delete</button></p>
+	<p><span>ImageStudy ID </span><input type="text" size=1 id="imid" name="imid" value="1"> <button onclick="window.open(WebImageStudy())">Extract!</button> <button>Edit</button> <button>Delete</button></p>
+
+	<p><button onclick="window.open('http://localhost:8080/FHIRTestWebClient/insert.html')">Insert</button></p>
+	<hr>
+    <p class="options">
+      Options:
+      <label title="Generate node as collapsed">
+        <input type="checkbox" id="collapsed">Collapse nodes
+      </label>
+      <label title="Allow root element to be collasped">
+        <input type="checkbox" id="root-collapsable" checked>Root collapsable
+      </label>
+      <label title="Surround keys with quotes">
+        <input type="checkbox" id="with-quotes">Keys with quotes
+      </label>
+      <label title="Generate anchor tags for URL values">
+        <input type="checkbox" id="with-links" checked>
+        With Links
+      </label>
+    </p>
+
+    <pre id="json-renderer">
+    </pre>
+
+  </body>
+</html>
