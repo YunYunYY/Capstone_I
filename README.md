@@ -11,6 +11,8 @@
 |김정석|전산통계|팀원|아이디어 논의, 데이터베이스 관리
 |문혜경|전산통계|팀원|캡스톤 수행 계획 및 결과보고, 자료수집
 
+***
+
 ### 언어 및 사용기술 
 
 - JAVA 
@@ -19,12 +21,16 @@
 - Bootstrap 5.0
 - FHIR
 
+***
+
 ![test](https://user-images.githubusercontent.com/95139082/162564453-9b7056c3-3932-45ab-9373-cfc0ee073adb.gif)
 
 ### 구현방법 
 ```
 System.out.println("Hello World");
 ```
+
+***
 
 ### 프로젝트 설명
 
