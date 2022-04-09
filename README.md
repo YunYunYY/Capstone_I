@@ -11,14 +11,6 @@
 |김정석|전산통계|팀원|아이디어 논의, 데이터베이스 관리
 |문혜경|전산통계|팀원|캡스톤 수행 계획 및 결과보고, 자료수집
 
-
-
-### 구현방법 
-```
-System.out.println("Hello World");
-```
-
-
 ### 언어 및 사용기술 
 
 - JAVA 
@@ -26,6 +18,11 @@ System.out.println("Hello World");
 - Html, Css, Javascript
 - Bootstrap 5.0
 - FHIR
+
+### 구현방법 
+```
+System.out.println("Hello World");
+```
 
 ### 프로젝트 설명
 
