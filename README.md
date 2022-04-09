@@ -17,7 +17,7 @@
 
 - JAVA 
 - Mysql
-- Html, Css, Javascript
+- HTML, CSS, Javascript
 - Bootstrap 5.0
 - FHIR
 
