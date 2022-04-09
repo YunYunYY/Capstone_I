@@ -22,8 +22,14 @@
 - FHIR
 
 ***
+### 결과
+
+![Desktop](https://user-images.githubusercontent.com/95139082/162565243-dffc7c70-3323-40ab-a79f-c14bd3b5efcd.gif)
 
 ![test](https://user-images.githubusercontent.com/95139082/162564453-9b7056c3-3932-45ab-9373-cfc0ee073adb.gif)
+
+
+Bootstrap 5.0을 이용해 반응형 웹앱을 만들었습니다.
 
 ### 구현방법 
 ```
