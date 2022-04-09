@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert FHIR</title>
+<script>
+function insertion(event){
+	//var k = document.getElementsByname("fhir");
+	documet.getElementById('result').innerText = 
+		event.target.value;
+}
+</script>
+</head>
+<body>
+<input type="radio" name="fhir" value="Patient" onclick="insertion(event)">Patient
+<input type="radio" name="fhir" value="Practitioner">Practitioner
+<input type="radio" name="fhir" value="Practitioner">Hospital
+<input type="radio" name="fhir" value="Encounter">Encounter
+<input type="radio" name="fhir" value="Diagnosis">Diagnosis
+<input type="radio" name="fhir" value="Medication">Medication
+<input type="radio" name="fhir" value="ImageStudy">ImageStudy
+<hr>
+<p>
+aabv
+</p>
+<div id='result'></div>
+
+</body>
+</html>
