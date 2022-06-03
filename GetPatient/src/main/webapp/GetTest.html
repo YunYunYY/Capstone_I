@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function getPatient1 (eventObject) {
+	alert("Getting")
+	var request = new XMLHttpRequest();
+	request.open('GET', 'http://172.18.221.213:8080/hapi-fhirstarters-simple-server/Patient/3')
+	request.send()
+	alert("Sent")
+	request.onload = ()=>{
+		alert("Received")
+		document.write(request.response);
+
+	}
+}
+
+function getPatient2 (eventObject) {
+	alert("Getting")
+	fetch("http://localhost:8080/hapi-fhirstarters-simple-server/Patient/3")
+	.then(res => {
+		alert("res "+ res)
+    		return res.json();
+ 	})
+  	.then(data => {
+    		alert("data "+ JSON.stringify(data))
+  	})
+  	.catch(err => {
+    		alert("error")
+  	});
+}
+</SCRIPT>
+
+<h2 align=center> Using the event object </h2> <br>
+<a href=# onClick="getPatient1(event)"> 
+Click Request </a> <br> <br>
+<a href=# onClick="getPatient2(event)"> 
+Click Fetch </a> <br>
+
+</body>
+</html>
