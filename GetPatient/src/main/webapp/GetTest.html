@@ -9,7 +9,9 @@
 function getPatient1 (eventObject) {
 	alert("Getting")
 	var request = new XMLHttpRequest();
-	request.open('GET', 'http://172.18.221.213:8080/hapi-fhirstarters-simple-server/Patient/3')
+	var add = 'http://172.18.221.213:8080/hapi-fhirstarters-simple-server/Patient/'+document.getElementById(pid);
+	alert(add)
+	request.open('GET', add)
 	request.send()
 	alert("Sent")
 	request.onload = ()=>{
@@ -21,7 +23,7 @@ function getPatient1 (eventObject) {
 
 function getPatient2 (eventObject) {
 	alert("Getting")
-	fetch("http://localhost:8080/hapi-fhirstarters-simple-server/Patient/3")
+	fetch("http://172.18.221.213:8080/hapi-fhirstarters-simple-server/Patient/3")
 	.then(res => {
 		alert("res "+ res)
     		return res.json();
@@ -36,6 +38,7 @@ function getPatient2 (eventObject) {
 </SCRIPT>
 
 <h2 align=center> Using the event object </h2> <br>
+<input type="number" id="pid" name="pid">
 <a href=# onClick="getPatient1(event)"> 
 Click Request </a> <br> <br>
 <a href=# onClick="getPatient2(event)"> 
