@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>aaa.AddPatient</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddHospital</servlet-name>
+  	<display-name>AddHospital</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddHospital</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AddPatient</servlet-name>
   	<url-pattern>/AddPatient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddHospital</servlet-name>
+  	<url-pattern>/AddHospital</url-pattern>
   </servlet-mapping>
 </web-app>

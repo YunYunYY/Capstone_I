@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>Patient Create</title>
 </head>
 <body>
 <form action="AddPatient" method="post">

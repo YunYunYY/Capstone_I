@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AddPatient
+ * Servlet implementation class AddHospital
  */
-public class AddPatient extends HttpServlet {
+public class AddHospital extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddPatient() {
+    public AddHospital() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,10 +29,10 @@ public class AddPatient extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String[] para = new String[8];
-		for(int i=0;i<8;i++)
-			para[i]=request.getParameter("f"+i);
-		for(int i=0;i<8;i++)
+		String[] para = new String[5];
+		for(int i=0;i<5;i++)
+			para[i]=request.getParameter("ch"+i);
+		for(int i=0;i<5;i++)
 			System.out.println(para[i]);
 		try {
 			DoMySQL(para);
@@ -41,12 +41,6 @@ public class AddPatient extends HttpServlet {
 			System.out.println("Error ");
 			e.printStackTrace();
 		}
-		/*
-		System.out.println(request.getParameter("f1"));
-		System.out.println(request.getParameter("f2"));
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		*/
-		response.getWriter().append("Done");
 	}
 
 	/**
@@ -63,7 +57,7 @@ public class AddPatient extends HttpServlet {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(dburl,dbUser,dbpwd);
-		String sql = "Insert into patient values(";
+		String sql = "Insert into hospital values(";
 		for(int i=0;i<p.length-1;i++) {
 			if (p[i]=="") sql += "NULL, ";
 			else sql += "'" +p[i]+"',";
@@ -76,5 +70,4 @@ public class AddPatient extends HttpServlet {
 		ps.execute(sql);
 
 	}
-
 }
