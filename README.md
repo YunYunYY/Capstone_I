@@ -45,3 +45,5 @@ FHIR project 입니다.
 중간고사 끝나면 매주 1회 이상 커밋할 예정입니다.
 
 Test용 웹페이지 확인 : https://testfhir.netlify.app/
+
+http://172.18.221.213:8080/AddToFhir/
