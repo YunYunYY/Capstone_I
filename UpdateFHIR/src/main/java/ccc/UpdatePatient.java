@@ -29,8 +29,18 @@ public class UpdatePatient extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
+		String[] para = new String[8];
+		for(int i=0;i<8;i++)
+			para[i]=request.getParameter("up"+i);
+		for(int i=0;i<8;i++)
+			System.out.println(para[i]);
+		try {
+			DoMySQL(para);
+		}
+		catch(Exception e) {
+			System.out.println("Error ");
+			e.printStackTrace();
+		}}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -47,12 +57,13 @@ public class UpdatePatient extends HttpServlet {
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(dburl,dbUser,dbpwd);
 		String sql = "Update patient Set ";
-		for(int i=0;i<7;i++) {
+		for(int i=1;i<7;i++) {
 			if (p[i]=="") sql+=key[i]+"=NULL,";
 			else sql += key[i]+"='" +p[i]+"',";
 		}
 		if (p[7] =="") sql+=key[7]+"=NULL;";
-		else sql += "'" +p[7]+"');";
+		else sql += key[7]+"='" +p[7]+"'";
+		sql+=" where "+key[0]+"="+p[0]+";";
 		System.out.println(sql);
 		
 		PreparedStatement ps = conn.prepareStatement(sql);
