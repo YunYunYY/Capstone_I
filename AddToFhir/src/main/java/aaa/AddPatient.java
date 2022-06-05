@@ -1,6 +1,7 @@
 package aaa;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -34,19 +35,37 @@ public class AddPatient extends HttpServlet {
 			para[i]=request.getParameter("f"+i);
 		for(int i=0;i<8;i++)
 			System.out.println(para[i]);
+		PrintWriter writer = response.getWriter();
 		try {
 			DoMySQL(para);
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/AddToFhir/index.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Success\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 		}
 		catch(Exception e) {
 			System.out.println("Error ");
+			//response.getWriter().append("Error\n");
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/AddToFhir/index.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Error\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 			e.printStackTrace();
 		}
-		/*
-		System.out.println(request.getParameter("f1"));
-		System.out.println(request.getParameter("f2"));
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		*/
-		response.getWriter().append("Done");
+		
+		//response.getWriter().append("done");
 	}
 
 	/**
