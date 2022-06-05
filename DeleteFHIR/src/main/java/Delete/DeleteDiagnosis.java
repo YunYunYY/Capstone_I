@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DeletePatient
+ * Servlet implementation class DeleteDiagnosis
  */
-public class DeletePatient extends HttpServlet {
+public class DeleteDiagnosis extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DeletePatient() {
+    public DeleteDiagnosis() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +29,7 @@ public class DeletePatient extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String s = request.getParameter("dp0");
+		String s = request.getParameter("dd0");
 		try {
 			DoMySQL(s);
 		}
@@ -54,7 +54,7 @@ public class DeletePatient extends HttpServlet {
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(dburl,dbUser,dbpwd);
-		String sql = "delete from patient where pid ="+p+";";
+		String sql = "delete from diagnosis where did ="+p+";";
 		
 		System.out.println(sql);
 		

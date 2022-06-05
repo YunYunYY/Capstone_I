@@ -9,11 +9,11 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete Patient</title>
+<title>Delete Diagnosis</title>
 </head>
 <body>
-<form action="DeletePatient" method="post">
-Delete(PID) : <input type="text" name="dp0" size="20"><input type="submit" value= "OK" />
+<form action="DeleteDiagnosis" method="post">
+Delete(DID) : <input type="text" name="dd0" size="20"><input type="submit" value= "OK" />
 </form>
 <table width="100%" border="1">
 <thead>
@@ -42,21 +42,17 @@ Delete(PID) : <input type="text" name="dp0" size="20"><input type="submit" value
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(jdbcDriver, dbUser, dbPwd);
 			
-			pstmt = conn.prepareStatement("select * from patient");
+			pstmt = conn.prepareStatement("select * from diagnosis");
 			
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()){
 	%>
 		<tr>
+			<td><%= rs.getString("did") %></td>
 			<td><%= rs.getString("pid") %></td>
-			<td><%= rs.getString("LastName") %></td>
-			<td><%= rs.getString("FirstName") %></td>
-			<td><%= rs.getString("DateOfBirth") %></td>
-			<td><%= rs.getString("Gender") %></td>
-			<td><%= rs.getString("Address") %></td>
-			<td><%= rs.getString("PhoneNum") %></td>
-			<td><%= rs.getString("City") %></td>			
+			<td><%= rs.getString("DiagnosisName") %></td>
+			<td><%= rs.getString("DiagnosisCode") %></td>		
 		</tr>
 	<%
 			}
