@@ -1,4 +1,4 @@
-package aaa;
+package ccc;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,15 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AddEncounter
+ * Servlet implementation class UpdateSmoking
  */
-public class AddEncounter extends HttpServlet {
+public class UpdateSmoking extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AddEncounter() {
+    public UpdateSmoking() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,9 +29,9 @@ public class AddEncounter extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String[] para = new String[6];
+		String[] para = new String[3];
 		for(int i=0;i<para.length;i++)
-			para[i]=request.getParameter("ce"+i);
+			para[i]=request.getParameter("us"+i);
 		for(int i=0;i<para.length;i++)
 			System.out.println(para[i]);
 		try {
@@ -41,7 +41,6 @@ public class AddEncounter extends HttpServlet {
 			System.out.println("Error ");
 			e.printStackTrace();
 		}
-		response.getWriter().append("Done");
 	}
 
 	/**
@@ -55,16 +54,17 @@ public class AddEncounter extends HttpServlet {
 		String dburl = "jdbc:mysql://172.18.221.213:3306/testemr?useSSL=false";
 		//String dburl = "jdbc:mysql://localhost:3306/testemr?useSSL=false";
 		String dbUser = "root", dbpwd = "root";
-		
+		String[] key = {"smid","pid","SmokingStatus"};
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection conn = DriverManager.getConnection(dburl,dbUser,dbpwd);
-		String sql = "Insert into encounter values(";
-		for(int i=0;i<p.length-1;i++) {
-			if (p[i]=="") sql += "NULL, ";
-			else sql += "'" +p[i]+"',";
+		String sql = "Update Smoking Set ";
+		for(int i=1;i<p.length-1;i++) {
+			if (p[i]=="") sql+=key[i]+"=NULL,";
+			else sql += key[i]+"='" +p[i]+"',";
 		}
-		if (p[p.length-1] =="") sql += "NULL);";
-		else sql += "'" +p[p.length-1]+"');";
+		if (p[p.length-1] =="") sql+=key[p.length-1]+"=NULL;";
+		else sql += key[p.length-1]+"='" +p[p.length-1]+"'";
+		sql+=" where "+key[0]+"="+p[0]+";";
 		System.out.println(sql);
 		
 		PreparedStatement ps = conn.prepareStatement(sql);

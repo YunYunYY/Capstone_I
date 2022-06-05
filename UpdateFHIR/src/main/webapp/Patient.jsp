@@ -19,7 +19,7 @@ Update
 <tr> <td> City: </td> <td><input type="text" name="up7" size="20"> </td></tr>
 </table>
 <input type="submit" value= "OK" />
-</from>
+</form>
 
 </body>
 </html>
