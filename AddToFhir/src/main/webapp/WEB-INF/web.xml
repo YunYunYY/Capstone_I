@@ -16,6 +16,66 @@
   	<description></description>
   	<servlet-class>aaa.AddHospital</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>AddAllergy</servlet-name>
+  	<display-name>AddAllergy</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddAllergy</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddDiagonosis</servlet-name>
+  	<display-name>AddDiagonosis</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddDiagonosis</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddDiagnosis</servlet-name>
+  	<display-name>AddDiagnosis</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddDiagnosis</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddEncounter</servlet-name>
+  	<display-name>AddEncounter</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddEncounter</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddMedication</servlet-name>
+  	<display-name>AddMedication</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddMedication</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddPMH</servlet-name>
+  	<display-name>AddPMH</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddPMH</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddProvider</servlet-name>
+  	<display-name>AddProvider</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddProvider</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddSomking</servlet-name>
+  	<display-name>AddSomking</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddSomking</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddSmoking</servlet-name>
+  	<display-name>AddSmoking</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddSmoking</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddVaccinations</servlet-name>
+  	<display-name>AddVaccinations</display-name>
+  	<description></description>
+  	<servlet-class>aaa.AddVaccinations</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>AddPatient</servlet-name>
   	<url-pattern>/AddPatient</url-pattern>
@@ -23,5 +83,45 @@
   <servlet-mapping>
   	<servlet-name>AddHospital</servlet-name>
   	<url-pattern>/AddHospital</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddAllergy</servlet-name>
+  	<url-pattern>/AddAllergy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddDiagonosis</servlet-name>
+  	<url-pattern>/AddDiagonosis</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddDiagnosis</servlet-name>
+  	<url-pattern>/AddDiagnosis</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddEncounter</servlet-name>
+  	<url-pattern>/AddEncounter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddMedication</servlet-name>
+  	<url-pattern>/AddMedication</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddPMH</servlet-name>
+  	<url-pattern>/AddPMH</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddProvider</servlet-name>
+  	<url-pattern>/AddProvider</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddSomking</servlet-name>
+  	<url-pattern>/AddSomking</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddSmoking</servlet-name>
+  	<url-pattern>/AddSmoking</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddVaccinations</servlet-name>
+  	<url-pattern>/AddVaccinations</url-pattern>
   </servlet-mapping>
 </web-app>
