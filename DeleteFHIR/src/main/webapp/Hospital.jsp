@@ -21,8 +21,6 @@ Delete(HID) : <input type="text" name="dh0" size="20"><input type="submit" value
 			<th>HID</th>
 			<th>HospitalName</th>
 			<th>HospitalIdentifier</th>
-			<th>DateOfBirth</th>
-			<th>Gender</th>
 			<th>Address</th>
 			<th>PhoneNum</th>
 		</tr>
