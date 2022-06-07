@@ -36,8 +36,31 @@ public class UpdateAllergy extends HttpServlet {
 			System.out.println(para[i]);
 		try {
 			DoMySQL(para);
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/index.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/index.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Update Success\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
+			DoMySQL(para);
 		}
 		catch(Exception e) {
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/index.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/index.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Update Error\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 			System.out.println("Error ");
 			e.printStackTrace();
 		}
