@@ -184,6 +184,66 @@
   	<description></description>
   	<servlet-class>Delete.DeleteVaccinations</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ReadAllergy</servlet-name>
+  	<display-name>ReadAllergy</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadAllergy</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadDiagnosis</servlet-name>
+  	<display-name>ReadDiagnosis</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadDiagnosis</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadEncounter</servlet-name>
+  	<display-name>ReadEncounter</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadEncounter</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadHospital</servlet-name>
+  	<display-name>ReadHospital</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadHospital</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadMedication</servlet-name>
+  	<display-name>ReadMedication</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadMedication</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadPatient</servlet-name>
+  	<display-name>ReadPatient</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadPatient</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadPMH</servlet-name>
+  	<display-name>ReadPMH</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadPMH</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadProvider</servlet-name>
+  	<display-name>ReadProvider</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadProvider</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadSmoking</servlet-name>
+  	<display-name>ReadSmoking</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadSmoking</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ReadVaccinations</servlet-name>
+  	<display-name>ReadVaccinations</display-name>
+  	<description></description>
+  	<servlet-class>bbb.ReadVaccinations</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>DeleteAllergy</servlet-name>
   	<url-pattern>/DeleteAllergy</url-pattern>
@@ -303,5 +363,45 @@
   <servlet-mapping>
   	<servlet-name>DeleteVaccinations</servlet-name>
   	<url-pattern>/DeleteVaccinations</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadAllergy</servlet-name>
+  	<url-pattern>/ReadAllergy</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadDiagnosis</servlet-name>
+  	<url-pattern>/ReadDiagnosis</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadEncounter</servlet-name>
+  	<url-pattern>/ReadEncounter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadHospital</servlet-name>
+  	<url-pattern>/ReadHospital</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadMedication</servlet-name>
+  	<url-pattern>/ReadMedication</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadPatient</servlet-name>
+  	<url-pattern>/ReadPatient</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadPMH</servlet-name>
+  	<url-pattern>/ReadPMH</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadProvider</servlet-name>
+  	<url-pattern>/ReadProvider</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadSmoking</servlet-name>
+  	<url-pattern>/ReadSmoking</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ReadVaccinations</servlet-name>
+  	<url-pattern>/ReadVaccinations</url-pattern>
   </servlet-mapping>
 </web-app>

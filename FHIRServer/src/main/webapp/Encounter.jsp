@@ -12,6 +12,7 @@
 <title>Delete Encounter</title>
 </head>
 <body>
+<h4>Create Encounter</h4>
 <form action="AddEncounter" method="post">
 <table><tr> <td> EID: </td> <td><input type="text" name="ce0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="ce1" size="20"> </td></tr>
@@ -23,16 +24,30 @@
 <input type="submit" value= "OK" />
 </form>
 
-
-
-<form action="UpdateAllergy" method="post">
-<table><tr> <td> AID: </td> <td><input type="text" name="ua0" size="20"> </td></tr>
-<tr> <td> PID: </td>  <td><input type="text" name="ua1" size="20"> </td></tr>
-<tr> <td> Allergy Name: </td> <td><input type="text" name="ua2" size="20"> </td></tr>
+<h4>Read Encounter</h4>
+<form action="ReadEncounter" method="post">
+<table><tr> <td> EID: </td> <td><input type="text" name="re0" size="20"> </td></tr>
+<tr> <td> PID: </td>  <td><input type="text" name="re1" size="20"> </td></tr>
+<tr> <td> HID: </td>  <td><input type="text" name="re2" size="20"> </td></tr>
+<tr> <td> PRID: </td>  <td><input type="text" name="re3" size="20"> </td></tr>
+<tr> <td> AdmitDate: </td>  <td><input type="text" name="re4" size="20"> </td></tr>
+<tr> <td> EncounterType: </td>  <td><input type="text" name="re5" size="20"> </td></tr>
 </table>
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Update Encounter</h4>
+<form action="UpdateEncounter" method="post">
+<table><tr> <td> EID: </td> <td><input type="text" name="ue0" size="20"> </td></tr>
+<tr> <td> HID </td>  <td><input type="text" name="ue1" size="20"> </td></tr>
+<tr> <td> PRID: </td> <td><input type="text" name="ue2" size="20"> </td></tr>
+<tr> <td> PRID: </td> <td><input type="text" name="ue3" size="20"> </td></tr>
+<tr> <td> AdmitDate: </td> <td><input type="text" name="ue4" size="20"> </td></tr>
+<tr> <td> EncounterType: </td>  <td><input type="text" name="ue5" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
+<h4>Delete Encounter</h4>
 <form action="DeleteEncounter" method="post">
 Delete(EID) : <input type="text" name="de0" size="20"><input type="submit" value= "OK" />
 </form>

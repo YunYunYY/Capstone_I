@@ -9,9 +9,11 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete Allergy</title>
+<title>Allergy</title>
 </head>
 <body>
+
+<h4>Create Allergy</h4>
 <form action="AddAllergy" method="post">
 <table><tr> <td> AID: </td> <td><input type="text" name="ca0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="ca1" size="20"> </td></tr>
@@ -20,8 +22,16 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Read Allergy</h4>
+<form action="ReadAllergy" method="post">
+<table><tr> <td> AID: </td> <td><input type="text" name="ra0" size="20"> </td></tr>
+<tr> <td> PID: </td>  <td><input type="text" name="ra1" size="20"> </td></tr>
+<tr> <td> Allergy Name: </td> <td><input type="text" name="ra2" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
 
-
+<h4>Update Allergy</h4>
 <form action="UpdateAllergy" method="post">
 <table><tr> <td> AID: </td> <td><input type="text" name="ua0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="ua1" size="20"> </td></tr>
@@ -30,10 +40,11 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Delete Allergy</h4>
 <form action="DeleteAllergy" method="post">
 Delete(AID) : <input type="text" name="da0" size="20"><input type="submit" value= "OK" />
 </form>
-
+<br>
 
 
 

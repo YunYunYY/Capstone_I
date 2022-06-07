@@ -9,9 +9,10 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete PMH</title>
+<title>PMH</title>
 </head>
 <body>
+<h4>Create PMH</h4>
 <form action="AddPMH" method="post">
 <table><tr> <td> PMID: </td> <td><input type="text" name="cpmh0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="cpmh1" size="20"> </td></tr>
@@ -21,8 +22,17 @@
 </table>
 <input type="submit" value= "OK" />
 </form>
-
-
+<h4>Read PMH</h4>
+<form action="ReadPMH" method="post">
+<table><tr> <td> PMID: </td> <td><input type="text" name="rpmh0" size="20"> </td></tr>
+<tr> <td> PID: </td>  <td><input type="text" name="rpmh1" size="20"> </td></tr>
+<tr> <td> MedicalType: </td> <td><input type="text" name="rpmh2" size="20"> </td></tr>
+<tr> <td> MedicalName: </td> <td><input type="text" name="rpmh3" size="20"> </td></tr>
+<tr> <td> MedicalCode: </td> <td><input type="text" name="rpmh4" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
+<h4>Update PMH</h4>
 <form action="UpdatePMH" method="post">
 <table><tr> <td> PMID: </td> <td><input type="text" name="upmh0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="upmh1" size="20"> </td></tr>
@@ -32,7 +42,7 @@
 </table>
 <input type="submit" value= "OK" />
 </form>
-
+<h4>Delete PMH</h4>
 <form action="DeletePMH" method="post">
 Delete(PMID) : <input type="text" name="dpmh0" size="20"><input type="submit" value= "OK" />
 </form>

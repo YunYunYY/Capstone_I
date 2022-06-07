@@ -12,6 +12,7 @@
 <title>Delete Hospital</title>
 </head>
 <body>
+<h4>Create Hospital</h4>
 <form action="AddHospital" method="post">
 <table><tr> <td> HID: </td> <td><input type="text" name="ch0" size="20"> </td></tr>
 <tr> <td> HospitalName: </td>  <td><input type="text" name="ch1" size="20"> </td></tr>
@@ -22,8 +23,18 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Read Hospital</h4>
+<form action="ReadHospital" method="post">
+<table><tr> <td> HID: </td> <td><input type="text" name="rh0" size="20"> </td></tr>
+<tr> <td> HospitalName: </td>  <td><input type="text" name="rh1" size="20"> </td></tr>
+<tr> <td> HospitalIdentifier: </td> <td><input type="text" name="rh2" size="20"> </td></tr>
+<tr> <td> Address: </td> <td><input type="text" name="rh3" size="20"> </td></tr>
+<tr> <td> PhoneNum: </td> <td><input type="text" name="rh4" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
 
-
+<h4>Update Hospital</h4>
 <form action="UpdateHospital" method="post">
 <table><tr> <td> HID: </td> <td><input type="text" name="uh0" size="20"> </td></tr>
 <tr> <td> HospitalName: </td>  <td><input type="text" name="uh1" size="20"> </td></tr>
@@ -34,6 +45,7 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Delete Hospital</h4>
 <form action="DeleteHospital" method="post">
 Delete(HID) : <input type="text" name="dh0" size="20"><input type="submit" value= "OK" />
 </form>

@@ -9,9 +9,10 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete Medication</title>
+<title>Medication</title>
 </head>
 <body>
+<h4>Create Medication</h4>
 <form action="AddMedication" method="post">
 <table><tr> <td> MID: </td> <td><input type="text" name="cm0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="cm1" size="20"> </td></tr>
@@ -21,8 +22,17 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Read Medication</h4>
+<form action="ReadMedication" method="post">
+<table><tr> <td> MID: </td> <td><input type="text" name="rm0" size="20"> </td></tr>
+<tr> <td> PID: </td>  <td><input type="text" name="rm1" size="20"> </td></tr>
+<tr> <td> MedicationName: </td> <td><input type="text" name="rm2" size="20"> </td></tr>
+<tr> <td> MedicationCode: </td> <td><input type="text" name="rm3" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
 
-
+<h4>Update Medication</h4>
 <form action="UpdateMedication" method="post">
 <table><tr> <td> MID: </td> <td><input type="text" name="um0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="um1" size="20"> </td></tr>
@@ -32,6 +42,7 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Delete Medication</h4>
 <form action="DeleteMedication" method="post">
 Delete(MID) : <input type="text" name="dm0" size="20"><input type="submit" value= "OK" />
 </form>

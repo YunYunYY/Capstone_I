@@ -9,9 +9,10 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete Patient</title>
+<title>Patient</title>
 </head>
 <body>
+<h4>Create Patient</h4>
 <form action="AddPatient" method="post">
 <table><tr> <td> PID: </td> <td><input type="text" name="f0" size="20"> </td></tr>
 <tr> <td> Last Name: </td>  <td><input type="text" name="f1" size="20"> </td></tr>
@@ -24,11 +25,22 @@
 </table>
 <input type="submit" value= "OK" />
 </form>
-
-
-
+<h4>Read Patient</h4>
+<form action="ReadPatient" method="post">
+<table><tr> <td> PID: </td> <td><input type="text" name="rp0" size="20"> </td></tr>
+<tr> <td> LastName: </td>  <td><input type="text" name="rp1" size="20"> </td></tr>
+<tr> <td> FirstName: </td> <td><input type="text" name="rp2" size="20"> </td></tr>
+<tr> <td> DateOfBirth: </td> <td><input type="text" name="rp3" size="20"> </td></tr>
+<tr> <td> Gender: </td> <td><input type="text" name="rp4" size="20"> </td></tr>
+<tr> <td> Address: </td> <td><input type="text" name="rp5" size="20"> </td></tr>
+<tr> <td> PhoneNum: </td> <td><input type="text" name="rp6" size="20"> </td></tr>
+<tr> <td> City: </td> <td><input type="text" name="rp7" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
+<h4>Update Patient</h4>
 <form action="UpdatePatient" method="post">
-Update
+
 <table><tr> <td> PID: </td> <td><input type="text" name="up0" size="20"> </td></tr>
 <tr> <td> Last Name: </td>  <td><input type="text" name="up1" size="20"> </td></tr>
 <tr> <td> First Name: </td> <td><input type="text" name="up2" size="20"> </td></tr>
@@ -40,6 +52,7 @@ Update
 </table>
 <input type="submit" value= "OK" />
 </form>
+<h4>Delete Patient</h4>
 <form action="DeletePatient" method="post">
 Delete(PID) : <input type="text" name="dp0" size="20"><input type="submit" value= "OK" />
 </form>

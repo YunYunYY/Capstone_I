@@ -12,6 +12,7 @@
 <title>Delete Diagnosis</title>
 </head>
 <body>
+<h4>Create Diagnosis</h4>
 <form action="AddDiagnosis" method="post">
 <table><tr> <td> DID: </td> <td><input type="text" name="cd0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="cd1" size="20"> </td></tr>
@@ -21,9 +22,17 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Read Diagnosis</h4>
+<form action="ReadDiagnosis" method="post">
+<table><tr> <td> DID: </td> <td><input type="text" name="rd0" size="20"> </td></tr>
+<tr> <td> PID: </td>  <td><input type="text" name="rd1" size="20"> </td></tr>
+<tr> <td> Diagnosis Name: </td> <td><input type="text" name="rd2" size="20"> </td></tr>
+<tr> <td> Diagnosis Code: </td> <td><input type="text" name="rd3" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
 
-
-
+<h4>Update Diagnosis</h4>
 <form action="UpdateDiagnosis" method="post">
 <table><tr> <td> DID: </td> <td><input type="text" name="ud0" size="20"> </td></tr>
 <tr> <td> PID: </td>  <td><input type="text" name="ud1" size="20"> </td></tr>
@@ -33,20 +42,19 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Delete Diagnosis</h4>
 <form action="DeleteDiagnosis" method="post">
 Delete(DID) : <input type="text" name="dd0" size="20"><input type="submit" value= "OK" />
 </form>
+
+<br>
 <table width="100%" border="1">
 <thead>
 		<tr>
+			<th>DID</th>
 			<th>PID</th>
-			<th>LastName</th>
-			<th>FirstName</th>
-			<th>DateOfBirth</th>
-			<th>Gender</th>
-			<th>Address</th>
-			<th>PhoneNum</th>
-			<th>City</th>
+			<th>Diagnosis Name</th>
+			<th>Diagnosis Code</th>
 		</tr>
 	</thead>
 	<tbody>

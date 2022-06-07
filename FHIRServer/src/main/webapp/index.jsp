@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Delete FHIR!</h2>
+<h2>FHIR Server!</h2>
 <button type="button" class="navyBtn" onClick="location.href='Patient.jsp'">Patient</button>
 <button type="button" class="navyBtn" onClick="location.href='Hospital.jsp'">Hospital</button>
 <button type="button" class="navyBtn" onClick="location.href='Allergy.jsp'">Allergy</button>

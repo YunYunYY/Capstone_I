@@ -9,9 +9,10 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Delete Provider</title>
+<title>Provider</title>
 </head>
 <body>
+<h4>Create Provider</h4>
 <form action="AddProvider" method="post">
 <table><tr> <td> PRID: </td> <td><input type="text" name="cpr0" size="20"> </td></tr>
 <tr> <td> LicenseNum: </td>  <td><input type="text" name="cpr1" size="20"> </td></tr>
@@ -21,9 +22,18 @@
 </table>
 <input type="submit" value= "OK" />
 </form>
+<h4>Read Provider</h4>
+<form action="ReadProvider" method="post">
+<table><tr> <td> PRID: </td> <td><input type="text" name="rpr0" size="20"> </td></tr>
+<tr> <td> LicenseNum: </td>  <td><input type="text" name="rpr1" size="20"> </td></tr>
+<tr> <td> ProviderName: </td> <td><input type="text" name="rpr2" size="20"> </td></tr>
+<tr> <td> SpecialtyCode: </td> <td><input type="text" name="rpr3" size="20"> </td></tr>
+<tr> <td> SpecialtyName: </td> <td><input type="text" name="rpr4" size="20"> </td></tr>
+</table>
+<input type="submit" value= "OK" />
+</form>
 
-
-
+<h4>Update Provider</h4>
 <form action="UpdateProvider" method="post">
 <table><tr> <td> PRID: </td> <td><input type="text" name="upr0" size="20"> </td></tr>
 <tr> <td> LicenseNum: </td>  <td><input type="text" name="upr1" size="20"> </td></tr>
@@ -34,6 +44,7 @@
 <input type="submit" value= "OK" />
 </form>
 
+<h4>Delete Provider</h4>
 <form action="DeleteProvider" method="post">
 Delete(PRID) : <input type="text" name="dpr0" size="20"><input type="submit" value= "OK" />
 </form>
