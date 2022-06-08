@@ -31,7 +31,7 @@ public class AddEncounter extends HttpServlet {
 		// TODO Auto-generated method stub
 		String[] para = new String[6];
 		for(int i=0;i<para.length;i++)
-			para[i]=request.getParameter("ce"+i);
+			para[i]=request.getParameter("row"+i);
 		for(int i=0;i<para.length;i++)
 			System.out.println(para[i]);
 		try {
