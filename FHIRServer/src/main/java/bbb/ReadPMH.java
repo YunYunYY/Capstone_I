@@ -33,7 +33,7 @@ public class ReadPMH extends HttpServlet {
       // TODO Auto-generated method stub
       String[] para = new String[5];
          for (int i=0; i<para.length; i++)
-         para[i] = request.getParameter("rpmh"+i);
+         para[i] = request.getParameter("row"+i);
          for (int i=0; i<para.length; i++)
          System.out.println(para[i]);
          String s = DoMySQL(para);
