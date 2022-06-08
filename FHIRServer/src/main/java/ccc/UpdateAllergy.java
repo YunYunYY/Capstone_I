@@ -47,7 +47,7 @@ public class UpdateAllergy extends HttpServlet {
 			writer.println("<body>");
 			writer.println("</body>");
 			writer.println("</html>");
-			DoMySQL(para);
+			
 		}
 		catch(Exception e) {
 			writer.println("<html>");
