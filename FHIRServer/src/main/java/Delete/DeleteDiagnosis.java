@@ -32,8 +32,32 @@ public class DeleteDiagnosis extends HttpServlet {
 		String s = request.getParameter("dd0");
 		try {
 			DoMySQL(s);
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/Diagnosis.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/index.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Delete Success\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 		}
 		catch(Exception e) {
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/index.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/Diagnosis.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Delete Error\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
+			System.out.println("Error ");
+			e.printStackTrace();
 			System.out.println("Error ");
 			e.printStackTrace();
 		}
