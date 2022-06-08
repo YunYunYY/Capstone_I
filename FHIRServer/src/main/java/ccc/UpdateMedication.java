@@ -31,9 +31,10 @@ public class UpdateMedication extends HttpServlet {
 		// TODO Auto-generated method stub
 		String[] para = new String[4];
 		for(int i=0;i<para.length;i++)
-			para[i]=request.getParameter("row"+i);
+			para[i]=request.getParameter("um"+i);
 		for(int i=0;i<para.length;i++)
 			System.out.println(para[i]);
+		PrintWriter writer = response.getWriter();
 		try {
 			DoMySQL(para);
 			writer.println("<html>");
