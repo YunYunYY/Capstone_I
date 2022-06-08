@@ -29,7 +29,7 @@ public class DeletePatient extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String s = request.getParameter("dp0");
+		String s = request.getParameter("row0");
 		try {
 			DoMySQL(s);
 			writer.println("<html>");
