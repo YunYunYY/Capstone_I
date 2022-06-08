@@ -32,7 +32,7 @@ public class AddPatient extends HttpServlet {
 		// TODO Auto-generated method stub
 		String[] para = new String[8];
 		for(int i=0;i<8;i++)
-			para[i]=request.getParameter("f"+i);
+			para[i]=request.getParameter("row"+i);
 		for(int i=0;i<8;i++)
 			System.out.println(para[i]);
 		PrintWriter writer = response.getWriter();
