@@ -33,7 +33,7 @@ public class ReadVaccinations extends HttpServlet {
       // TODO Auto-generated method stub
       String[] para = new String[4];
          for (int i=0; i<para.length; i++)
-         para[i] = request.getParameter("rv"+i);
+         para[i] = request.getParameter("row"+i);
          for (int i=0; i<para.length; i++)
         	 System.out.println(para[i]);
          String s = DoMySQL(para);
