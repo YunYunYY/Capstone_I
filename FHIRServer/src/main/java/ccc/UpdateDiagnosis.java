@@ -31,13 +31,35 @@ public class UpdateDiagnosis extends HttpServlet {
 		// TODO Auto-generated method stub
 		String[] para = new String[4];
 		for(int i=0;i<para.length;i++)
-			para[i]=request.getParameter("ud"+i);
+			para[i]=request.getParameter("row"+i);
 		for(int i=0;i<para.length;i++)
 			System.out.println(para[i]);
 		try {
 			DoMySQL(para);
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/Diagnosis.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/Diagnosis.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Update Success\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 		}
 		catch(Exception e) {
+			writer.println("<html>");
+			writer.println("<header>");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/Diagnosis.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/Diagnosis.jsp\">");
+			writer.println("</header>");
+			writer.println("<script type=\"text/javascript\">");
+			writer.println("alert(\"Update Error\");");
+			writer.println("</script>");
+			writer.println("<body>");
+			writer.println("</body>");
+			writer.println("</html>");
 			System.out.println("Error ");
 			e.printStackTrace();
 		}
