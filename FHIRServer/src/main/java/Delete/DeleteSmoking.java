@@ -29,7 +29,8 @@ public class DeleteSmoking extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String s = request.getParameter("row0");
+		String s = request.getParameter("ds0");
+		PrintWriter writer = response.getWriter();
 		try {
 			DoMySQL(s);
 			writer.println("<html>");
