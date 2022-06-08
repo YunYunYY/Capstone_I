@@ -31,15 +31,15 @@ public class UpdateAllergy extends HttpServlet {
 		// TODO Auto-generated method stub
 		String[] para = new String[3];
 		for(int i=0;i<para.length;i++)
-			para[i]=request.getParameter("ua"+i);
+			para[i]=request.getParameter("row"+i);
 		for(int i=0;i<para.length;i++)
 			System.out.println(para[i]);
 		try {
 			DoMySQL(para);
 			writer.println("<html>");
 			writer.println("<header>");
-			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/index.jsp\">");
-			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/index.jsp\">");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/Allergy.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/Allergy.jsp\">");
 			writer.println("</header>");
 			writer.println("<script type=\"text/javascript\">");
 			writer.println("alert(\"Update Success\");");
@@ -52,8 +52,8 @@ public class UpdateAllergy extends HttpServlet {
 		catch(Exception e) {
 			writer.println("<html>");
 			writer.println("<header>");
-			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/index.jsp\">");
-			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/index.jsp\">");
+			writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://172.18.221.213:8080/FHIRServer/Allergy.jsp\">");
+			//writer.println("<meta http-equiv=\"refresh\"content=\"0;url=http://localhost:8080/FHIRServer/Allergy.jsp\">");
 			writer.println("</header>");
 			writer.println("<script type=\"text/javascript\">");
 			writer.println("alert(\"Update Error\");");
